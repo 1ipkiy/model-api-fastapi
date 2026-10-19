@@ -78,7 +78,8 @@ model-api-fastapi/
 ├── train_model.py         # train stub → model/ + results/metrics.json
 ├── Dockerfile
 ├── docker-compose.yml
-├── .github/workflows/ci.yml
+├── .github/workflows/ci.yml  # enable Actions: copy from ci/github-actions.yml
+├── ci/github-actions.yml     # workflow YAML (on GitHub)
 ├── app/
 │   ├── main.py            # FastAPI routes + latency middleware
 │   ├── model_loader.py
@@ -123,6 +124,10 @@ curl -s -X POST http://127.0.0.1:8000/predict \
 docker compose up --build
 # or: docker build -t model-api . && docker run -p 8000:8000 model-api
 ```
+
+### CI note
+
+Workflow YAML is published at `ci/github-actions.yml`. Copy it to `.github/workflows/ci.yml` (requires a GitHub token with the `workflow` scope to push that path) to enable Actions.
 
 ### Free-tier deploy (optional)
 
