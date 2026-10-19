@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-10-19T15:16:30.321961+00:00",
+  "model_name": "tfidf_logreg",
+  "version": "1.0.0",
+  "n_train": 18,
+  "n_test": 6,
+  "accuracy": 0.8333,
+  "precision_spam": 1.0,
+  "recall_spam": 0.6667,
+  "f1_spam": 0.8,
+  "labels": [
+    "ham",
+    "spam"
+  ],
+  "note": "Tiny stub dataset for API demo \u2014 not the full UCI SMS corpus from Project 1."
+}
